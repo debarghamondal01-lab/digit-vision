@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digit Vision — Handwritten Digit Recognition</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+	        <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+            <span class="theme-icon">🌙</span>
+        </button>
+        <header class="app-header">
+            <h1>🔢 Digit Vision</h1>
+            <p class="subtitle">Handwritten Digit Recognition with CNN</p>
+        </header>
+
+        <div class="main-layout">
+            <div class="canvas-section">
+                <div class="canvas-wrapper">
+                    <canvas id="drawCanvas" width="280" height="280"></canvas>
+                </div>
+                <div class="canvas-controls">
+                    <button id="clearBtn" class="btn">🗑️ Clear</button>
+                    <button id="predictBtn" class="btn primary">🔍 Predict</button>
+                </div>
+                <p class="hint-text">Draw a digit (0-9) with your mouse or finger</p>
+            </div>
+
+            <div class="results-section">
+                <div class="result-card main-result">
+                    <span class="result-label">Prediction</span>
+                    <div id="predictedDigit" class="predicted-digit">—</div>
+                    <span id="confidenceText" class="confidence-text">Draw a digit and click Predict</span>
+                </div>
+
+                <div class="result-card">
+                    <h3>Top 3 Guesses</h3>
+                    <div id="top3List" class="top3-list">
+                        <p class="placeholder">Waiting for input...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
